@@ -10,7 +10,7 @@ COPY src /app/src
 COPY pom.xml /app
 
 # Package the application
-RUN mvn clean install -DskipTests
+RUN mvn clean install -DskipTests=false
 
 # ---- Deploy Stage ----
 FROM openjdk:11-jdk-slim
